@@ -1,0 +1,98 @@
+import	java.util.Scanner;/*Input teclado*/
+
+
+public class Main {
+	
+	static void Soma() {
+	
+		Scanner scan = new Scanner(System.in);	
+		
+		int a,b;
+		a = scan.nextInt();
+		b = scan.nextInt();
+		
+		System.out.printf("SOMA = %d\n", a+b);
+		
+	}
+	
+	static void areaCirculo() {
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		double r, pi=3.14159, A;
+		r = scan.nextDouble();
+		
+		System.out.printf("A = %.4f\n", pi*Math.pow(r, 2));
+		
+	}
+	
+	static void diferencia() { 
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		int A, B, C, D;
+		A = scan.nextInt();
+		B = scan.nextInt();
+		C = scan.nextInt();
+		D = scan.nextInt();
+		
+		System.out.printf("DIFERENCA = %d\n", A*B-C*D);
+		
+	}
+	
+	static void salario() { 
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		int number, hour;
+		float price;
+		number = scan.nextInt();
+		hour = scan.nextInt();
+		price = scan.nextFloat();
+		
+		System.out.printf("NUMBER = %d\n", number);
+		System.out.printf("SALARY =  %.2f\n", price*hour);
+		
+	}
+	
+	static void compra() { 
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		int item1, quantity1, item2, quantity2;
+		float price1, price2;
+		item1 = scan.nextInt();
+		quantity1 = scan.nextInt();
+		price1 = scan.nextFloat();
+		item2 = scan.nextInt();
+		quantity2 = scan.nextInt();
+		price2 = scan.nextFloat();
+		
+		System.out.printf("VALOR A PAGAR = R$ %.2f\n", quantity1*price1+quantity2*price2);
+
+	}
+	
+	static void area() {
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		float a, b, c, pi=3.14159;
+		a = scan.nextFloat();
+		b = scan.nextFloat();
+		c = scan.nextFloat();
+		
+		System.out.printf("TRIANGULO = %.3f\n", a*c/2);
+		System.out.printf("CIRCULO = %.3f\n", pi*Math.pow(c, 2));
+		System.out.printf("TRAPEZIO = %.3f\n", (a+b)*c/2);
+		System.out.printf("QUADRADO = %.3f\n", Math.pow(b, 2));
+		System.out.printf("RETANGULO = %.3f\n", a*b);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+					
+		area();
+				
+	}
+}

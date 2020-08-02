@@ -1,0 +1,24 @@
+package entitites;
+
+public class funcionario {
+	
+	private Integer id;
+	private Double salary;
+	
+	/**/
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	
+	
+
+}

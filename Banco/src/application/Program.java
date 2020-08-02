@@ -1,0 +1,44 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.conta;
+
+
+
+public class Program {
+	
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		double valor;
+		
+		System.out.println("Entre com o numero da conta: ");
+		int id = sc.nextInt(); sc.nextLine();
+		System.out.println("Entre com o nome da conta: ");
+		String nome = sc.nextLine();
+		
+		conta conta = new conta(id, nome);/*Construtor com atributo obrigatorios*/
+		
+		System.out.println("Há um deposito inicial (y/n)? ");
+		char resp = sc.next().charAt(0);
+		if(resp == 'y') {
+			System.out.println("Entre com o com o valor do deposito: ");
+			valor = sc.nextDouble();
+			conta.deposito(valor);
+		}
+		System.out.println("Dados da Conta:\n" + conta);
+		System.out.println("Entre com o com o valor do deposito: ");
+		valor = sc.nextDouble();
+		conta.deposito(valor);
+		System.out.println("Dados da Conta atualizado:\n" + conta);
+		System.out.println("Entre com o com o valor do saque: ");
+		valor = sc.nextDouble();
+		conta.saque(valor);
+		System.out.println("Dados da Conta atualizado:\n" + conta);
+		
+		sc.close();
+
+	}
+
+}

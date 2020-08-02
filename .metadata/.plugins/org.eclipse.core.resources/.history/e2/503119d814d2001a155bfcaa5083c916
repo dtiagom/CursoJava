@@ -1,0 +1,197 @@
+import	java.util.Scanner;/*Input teclado^
+		usando no Começo 	Scanner sc =  new Scanner(System.in);
+		e no fim:			sc.close();*/
+
+public class Repeticao {
+	
+		static void password() {
+			
+			Scanner sc =  new Scanner(System.in);
+			
+			int senha=0;
+			
+			while(senha!=2000) {
+				senha = sc.nextInt();
+				if(senha==2000) {
+					System.out.println("Acesso Permitido");
+				}else{
+					System.out.println("Senha invalida");
+				}
+			}
+						
+			sc.close();
+		}
+		
+		static void quadrante() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			double y=1, x=1;
+			
+			while(x != 0 || y != 0) {
+				
+				x = sc.nextDouble();
+				y = sc.nextDouble();
+				
+				if(x > 0) {
+					if(y > 0) {
+						System.out.println("primeiro");
+					}else{
+						System.out.println("quarto");
+					}
+				}else {
+					if(y > 0) {
+						System.out.println("segundo");
+					}else{
+						System.out.println("terceiro");
+					}
+				}
+			}
+			
+			sc.close();
+		}
+		
+		static void pontuacao() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int alcool=0, gasolina=0, diesel=0, a=5;
+			
+			while(a != 4 ) {
+				
+				a = sc.nextInt();
+								
+				switch (a) {
+					case 1:
+						alcool++;
+						break;
+					case 2:
+						gasolina++;
+						break;
+					case 3:
+						diesel++;
+						break;
+		
+				}
+			}
+			
+			System.out.println("MUITO OBRIGADO");
+			System.out.println(	"\nAlcool: " + alcool + 
+								"\nGasolina: " + gasolina +
+								"\nDiesel: " + diesel);
+			
+			sc.close();
+			
+		}
+		
+		static void impar() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int x;
+			
+			x = sc.nextInt();
+			
+			for (int i = 0;i<=x;i++) {
+				if(i%2 == 1) {
+					System.out.println(i);
+				}
+			}
+			
+			sc.close();
+			
+		}
+		
+		static void intervalo() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int x, a, dentro=0, fora=0;
+			
+			x = sc.nextInt();
+			
+			for (int i = 1;i<=x;i++) {
+				a = sc.nextInt();
+				if(a >= 10 && a <= 20) {
+					dentro++;
+				}else{
+					fora++;				
+				}
+			}
+		
+			System.out.print(	dentro + " in\n" +
+								fora + " out\n");
+			
+			sc.close();
+			
+		}
+		
+		static void media() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int x;
+			float a, b, c, media;
+			
+			x = sc.nextInt();
+			
+			for (int i = 1;i<=x;i++) {
+				a = sc.nextFloat();b = sc.nextFloat();c = sc.nextFloat();
+				media = (2*a+3*b+5*c)/3;
+				System.out.printf("%.1f\n", media);			
+			}
+					
+			sc.close();
+			
+		}
+		
+		static void divisao() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int x;
+			float a, b, div;
+			
+			x = sc.nextInt();
+			
+			for (int i = 1;i<=x;i++) {
+				a = sc.nextFloat();b = sc.nextFloat();
+				if(b == 0) {
+					System.out.print("Divisão Impossivel\n");
+				}else {
+					div = a/b;System.out.printf("%.1f\n", div);
+				}
+							
+			}
+					
+			sc.close();
+			
+		}
+		
+		static void fatorial() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			int x;
+			double fat=1;
+			
+			x = sc.nextInt();
+			
+			for (int i = 1;i<=x;i++) {
+				fat *= i;		
+			}if(x==0) {
+				fat=1;
+			}
+					
+			System.out.println(fat);
+			sc.close();
+			
+		}
+		
+	public static void main(String[] args) {
+		
+		fatorial();
+
+	}
+
+}

@@ -1,0 +1,67 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import entitites.Funcionario;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantos funcionarios serão registrados? ");
+		int n = sc.nextInt();sc.nextLine();
+		List <Funcionario> list  = new ArrayList<>();
+		
+		for (int i=0; i<n; i++) {
+			
+			System.out.println("Funcionario " + (i+1) + ":");
+			System.out.print("Id: ");
+			Integer id = sc.nextInt();sc.nextLine();
+			System.out.print("Nome: ");
+			String nome = sc.nextLine();
+			System.out.print("Salario: ");
+			Double money = sc.nextDouble();sc.nextLine();
+			
+			Funcionario fun=  new Funcionario(id, nome, money);/*Construtor*/
+			
+			list.add(fun);
+		}
+		
+		System.out.print("Entre com a identificação que receberá o aumento de salario: ");
+		int v_id = sc.nextInt();
+		int pos = valideId(list, v_id);
+		while (pos == -1){
+			System.out.println("Identificação invalida\nEntre com um identificação novamente:");
+			v_id=sc.nextInt();sc.nextLine();
+			pos = valideId(list, v_id);
+		} 
+		
+		System.out.print("Entre com a porcentual a ser aumentado: ");
+		double per = sc.nextDouble();
+		list.get(pos).aumentoSalario(per);
+		
+		System.out.println("\n Lista de funcionarios:");
+		for(Funcionario fun: list) {
+			System.out.println(fun);
+		}
+		
+		
+		sc.close();
+
+	}
+	
+	public static int valideId(List <Funcionario> list, int id) {
+		for (int i =0; i < list.size(); i++) {
+			if (list.get(i).getId()  == id) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+
+}

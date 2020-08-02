@@ -1,0 +1,51 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o número de linhas: ");
+		int lin =sc.nextInt();
+		System.out.println("Digite o número de colunas: ");
+		int col =sc.nextInt();
+		
+		int[][] matx = new int[lin][col];
+		System.out.println("Valores da matrix: ");
+		/*Contrução da Matrix*/
+		for(int i = 0; i<lin; i++) {
+			for(int j = 0; j<col; j++) {
+				matx[i][j] =sc.nextInt(); 
+			}
+		}
+		
+		System.out.println("Entre com o valor: ");
+		int e =sc.nextInt();
+				
+		for(int i = 0; i<lin; i++) {
+			for(int j = 0; j<col; j++) {
+				if(e == matx[i][j]) { 
+					System.out.println("Posição " + i + ","+ j + ":");
+					if(j-1 >= 0) {
+						System.out.println("Up: " + matx[i][j-1]);
+					}
+					if(j+1 <= col){
+						System.out.println("Down: " + matx[i][j+1]);
+					}
+					if(i-1 >= 0) {
+						System.out.println("Left: " + matx[i-1][j]);
+					}
+					if(i+1 <= lin){
+						System.out.println("Right: " + matx[i+1][j]);
+					}
+				}
+			}
+		}			
+		
+		sc.close();
+	}
+
+}

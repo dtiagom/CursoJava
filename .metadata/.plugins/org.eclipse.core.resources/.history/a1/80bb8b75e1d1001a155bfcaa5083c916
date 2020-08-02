@@ -1,0 +1,21 @@
+import	java.util.Scanner;/*Input teclado*/
+
+public class Main {
+
+	static void Soma() {
+	
+		Scanner scan = new Scanner(System.in);
+		
+		int a,b;
+		a = scan.nextInt();
+		b = scan.nextInt();
+		
+		System.out.println(a+b);
+		
+	}
+	public static void main(String[] args) {
+					
+		Soma();
+				
+	}
+}

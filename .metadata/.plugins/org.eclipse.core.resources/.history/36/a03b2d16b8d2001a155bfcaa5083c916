@@ -1,0 +1,39 @@
+package entitites;
+
+public class Funcionario {
+	
+	private Integer id;
+	private String nome;
+
+	private Double salary;
+	
+	public funcionario(Integer id, Double salary) {
+		this.id = id;
+		this.salary = salary;
+	}
+	
+	/**/
+	public Integer getId() {
+		return id;
+	}
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	
+	public void aumentoSalario(double porcentage) {
+		this.salary = this.salary*.01*porcentage;
+	}
+	
+	
+
+}

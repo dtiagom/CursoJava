@@ -1,0 +1,23 @@
+package entities;
+
+public class aluno {
+	
+	String nome;
+	double trimestre1;
+	double trimestre2;
+	double trimestre3;
+	
+	public double calculaMedia() {
+		return (30*trimestre1+35*trimestre2+35*trimestre3)/100;
+	}
+	
+	public String toString() {
+		if(calculaMedia()>60) {
+			return "\nAprovado";
+		}else {
+			double falta = 60-calculaMedia();
+			return "\nReprovado\nFalta " + falta + " pontos";
+		}
+	}
+	
+}

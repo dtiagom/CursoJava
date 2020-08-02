@@ -1,0 +1,37 @@
+import	java.util.Scanner;/*Input teclado*/
+
+
+public class Main {
+	
+	
+	
+	static void Soma() {
+	
+		Scanner scan = new Scanner(System.in);	
+		
+		int a,b;
+		a = scan.nextInt();
+		b = scan.nextInt();
+		
+		System.out.println(a+b);
+		
+	}
+	
+	static void area() {
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		double r, pi=3.14159, A;
+		r = scan.nextInt();
+		
+		A=pi*Math.pow(r, 2);
+		
+		System.out.println("%.4f", A);
+	}
+	
+	public static void main(String[] args) {
+					
+		area();
+				
+	}
+}

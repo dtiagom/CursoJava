@@ -1,0 +1,40 @@
+package entities;
+
+public class conta {
+	
+	private int id;
+	private String name;
+	private double total;
+	
+	public conta(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public double getTotal() {
+		return total;
+	}
+	public void deposito(double valor) {
+		total += valor;
+	}
+	public void saque(double valor) {
+		total -= valor+5;
+	}
+
+	@Override
+	public String toString() {
+		return "Conta "  + id + ", Dono: " + name + ", Balanço: $ " + total ;
+	}
+	
+	
+}

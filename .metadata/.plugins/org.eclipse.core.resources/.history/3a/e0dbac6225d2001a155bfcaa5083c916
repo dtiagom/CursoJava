@@ -1,0 +1,37 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+	
+
+	public static void main(String[] args) {
+		
+		Scanner sc =  new Scanner(System.in);
+		
+		double a1, b1, c1, a2, b2, c2;
+		
+		System.out.println("Entre com os valores do primeiro triangulo:");
+		a1 = sc.nextDouble();
+		b1 = sc.nextDouble();
+		c1 = sc.nextDouble();
+		System.out.println("Entre com os valores do segundo triangulo:");
+		a2 = sc.nextDouble();
+		b2 = sc.nextDouble();
+		c2 = sc.nextDouble();
+		
+		/*Calculo da areo de um triangulo generico*/
+		double p = (a1+b1+c1)/2;
+		double area1 = Math.sqrt(p*(p-a1)*(p-b1)*(p-c1));
+
+		p = (a2+b2+c2)/2;
+		double area2 = Math.sqrt(p*(p-a2)*(p-b2)*(p-c2));
+		
+		System.out.printf("A Area do Triando X: %0.4f", area1);
+		System.out.printf("A Area do Triando y: %0.4f", area1);
+		
+		sc.close();
+		
+	}
+
+}

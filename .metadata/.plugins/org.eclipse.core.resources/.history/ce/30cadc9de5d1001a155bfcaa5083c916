@@ -1,0 +1,63 @@
+import	java.util.Scanner;/*Input teclado*/
+
+
+public class Main {
+	
+	static void Soma() {
+	
+		Scanner scan = new Scanner(System.in);	
+		
+		int a,b;
+		a = scan.nextInt();
+		b = scan.nextInt();
+		
+		System.out.printf("SOMA = %d\n", a+b);
+		
+	}
+	
+	static void area() {
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		double r, pi=3.14159, A;
+		r = scan.nextDouble();
+		
+		System.out.printf("A = %.4f\n", pi*Math.pow(r, 2));
+		
+	}
+	
+	static void diferencia() { 
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		int A, B, C, D;
+		A = scan.nextInt();
+		B = scan.nextInt();
+		C = scan.nextInt();
+		D = scan.nextInt();
+		
+		System.out.printf("DIFERENCA = %d\n", A*B-C*D);
+		
+	}
+	
+	static void salario() { 
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		int number, hour;
+		float price;
+		number = scan.nextInt();
+		hour = scan.nextInt();
+		price = scan.nextFloat();
+		
+		System.out.printf("NUMBER = %d\n", number);
+		System.out.printf("SALARY =  %.2f\n", price*hour);
+		
+	}
+	
+	public static void main(String[] args) {
+					
+		salario();
+				
+	}
+}

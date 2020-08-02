@@ -1,0 +1,30 @@
+import	java.util.Scanner;/*Input teclado^
+		usando no Começo 	Scanner sc =  new Scanner(System.in);
+		e no fim:			sc.close();*/
+
+public class Repeticao {
+	
+		static void senha() {
+			
+			Scanner sc =  new Scanner(System.in);
+			
+			int senha=0;
+			
+			while(senha!=2000) {
+				senha = sn.nextInt();
+				System.out.println("Senha invalida");
+			}
+			
+			System.out.println("Acesso Permitido");
+			
+			sc.close();
+		}
+		
+	public static void main(String[] args) {
+		
+		senha();
+
+
+	}
+
+}
